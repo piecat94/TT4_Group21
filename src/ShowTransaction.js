@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ShowTransaction = ({items}) =>{
+export const ShowTransaction = ({items}) =>{
     return(
         <table>
             <thead>

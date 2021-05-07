@@ -50,14 +50,14 @@ class TransactionInfo extends Component {
         console.log(error);
         });
 
-        render() {
-            return (
-                <div>
-                    <h1>Transaction Details</h1>
-                    <ShowTransaction items = {this.items}/>
-                </div>
-            );
-        }
+    }
+    render() {
+        return (
+            <div>
+                <h1>Transaction Details</h1>
+                <ShowTransaction items = {this.items}/>
+             </div>
+        );
     }
     
 }
