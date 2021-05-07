@@ -32,7 +32,7 @@ function About(){
               payeeID: 12,
                 amount: 300,
                 eGift: false,
-                message: "cool"
+                message: "test"
             }
           });
           console.log(res.data)
