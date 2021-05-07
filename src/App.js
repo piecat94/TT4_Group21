@@ -5,7 +5,7 @@ import Nav from "./Nav"
 import About from "./About"
 import MyWallet from "./MyWallet"
 import Dashboard from "./Dashboard"
-import TransactionInfo from "./components/TransactionInfo"
+import TransactionInfo from "./TransactionInfo"
 import {
   BrowserRouter as Router,
   Switch,
@@ -32,6 +32,7 @@ function App() {
         <Route path = "/Dashboard" exact component = {()=><Dashboard loginState = {isLogin}/>}/>
         <Route path = "/Dashboard/MyWallet"  component = {MyWallet} />
         <Route path ="/Dashboard/About"  component  = {About}/>
+        <Route path ="/Dashboard/TransactionInfo"  component  = {TransactionInfo}/>
      
       </Switch>
     </div>

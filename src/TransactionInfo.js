@@ -56,7 +56,7 @@ class TransactionInfo extends Component {
                     <h1>Transaction Details</h1>
                     <ShowTransaction items = {this.items}/>
                 </div>
-            )
+            );
         }
     }
     
