@@ -6,6 +6,7 @@ import {
     Route,
     Link
   } from "react-router-dom";
+import { Descriptions, Badge } from 'antd';
 
 function Dashboard(props){
 
@@ -57,11 +58,17 @@ function Dashboard(props){
                 Main page
             </h1>
             {/* <button onClick = {getJoke}>Get Joke</button> */}
-            <p> {acctdetails.firstName} {acctdetails.lastName}</p>
-            <p> {acctdetails.email} </p>
-            <p> {acctdetails.address} </p>
-            <p> {acctdetails.nric} </p>
+            {/* <p> Name: {acctdetails.firstName} {acctdetails.lastName}</p>
+            <p> CustomerID: {acctdetails.custID} </p>
+            <p> Account Key: {acctdetails.accountKey} </p> */}
             {/* {props.loginState?<h1>True</h1>:<h1>False</h1>} */}
+
+
+            <Descriptions title="User Info" layout="vertical" bordered>
+            <Descriptions.Item label="Name">{acctdetails.firstName} {acctdetails.lastName}</Descriptions.Item>
+            <Descriptions.Item label="CustomerID">{acctdetails.custID}</Descriptions.Item>
+            <Descriptions.Item label="Account Key">{acctdetails.accountKey}</Descriptions.Item>
+            </Descriptions>
 
         </div>
     )
