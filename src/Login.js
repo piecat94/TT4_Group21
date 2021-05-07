@@ -15,9 +15,13 @@ function Login(props){
   console.log(props)
 
   const onFinish = (values) => {
-    console.log('Success:', values);
-    props.history.push('/Dashboard');
-    props.setLogin();
+
+    if (values.username === "Group21" && values.password === "mZNcE%K2IPzZJqp") {
+      console.log('Success:', values);
+      props.history.push('/Dashboard');
+      props.setLogin(); }
+    else {alert("Wrong Username/Password");
+    return;}
     
   };
 
