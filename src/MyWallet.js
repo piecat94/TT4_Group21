@@ -5,50 +5,20 @@ import Axios from "axios"
 
 const columns = [
   {
-    title: 'Key',
-    dataIndex: 'id',
+    title: 'Name',
+    dataIndex: 'accountName',
   },
   {
-    title: 'Type',
-    dataIndex: 'type',
+    title: 'Account Number',
+    dataIndex: 'accountNumber',
   },
   {
-    title: 'Setup',
-    dataIndex: 'setup',
+    title: 'Balance',
+    dataIndex: 'availableBal',
   },
-  {
-    title: 'Punchline',
-    dataIndex: 'punchline',
-  },
+ 
   
 ];
-/*
-let oldData = [
-  {
-    key: '1',
-    name: 'John Brown',
-    age: 32,
-    address: 'New York No. 1 Lake Park',
-  },
-  {
-    key: '2',
-    name: 'Jim Green',
-    age: 42,
-    address: 'London No. 1 Lake Park',
-  },
-  {
-    key: '3',
-    name: 'Joe Black',
-    age: 32,
-    address: 'Sidney No. 1 Lake Park',
-  },
-  {
-    key: '4',
-    name: 'Disabled User',
-    age: 99,
-    address: 'Sidney No. 1 Lake Park',
-  },
-];*/
 
 const rowSelection = {
   onChange: (selectedRowKeys, selectedRows) => {
@@ -66,11 +36,20 @@ function MyWallet(){
 
     const [data, setData] = useState("");
     const [selectionType, setSelectionType] = useState('checkbox');
-    async function getTenJoke() {
+    async function getWalletInfo() {
         try {
           let res = await Axios({
-            method: 'get',
-            url: 'https://official-joke-api.appspot.com/random_ten'
+            method: 'post',
+            url: 'https://ipllrj2mq8.execute-api.ap-southeast-1.amazonaws.com/techtrek/accounts'
+            ,
+            headers: {
+               "x-api-key": "PgfXlfXJFM2QyTmuBOTKUazP03JWex648svPUCl5"
+            }
+            ,
+            data: {
+              custID: 21,
+              accountKey: "v8f9qys7-t3ru-81jm-pqb4-7qngr7rna5i"
+            }
           });
           console.log(res.data)
           
@@ -83,7 +62,7 @@ function MyWallet(){
       
       }
       useEffect(() => {
-          getTenJoke()
+          getWalletInfo()
 
       }, [])
  
@@ -91,7 +70,7 @@ function MyWallet(){
     return (
         <div>
             <h3>
-                My Wallet
+                My Account
             </h3>
             <Radio.Group
         onChange={({ target: { value } }) => {

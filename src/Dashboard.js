@@ -37,10 +37,10 @@ function Dashboard(props){
 
     
         useEffect(() => {
-          getJoke()
+         /*getJoke()
           setInterval(() => {
             getJoke()
-          }, 10000); 
+          }, 10000); */
       }, [])
  
 

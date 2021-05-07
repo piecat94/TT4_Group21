@@ -18,6 +18,7 @@ import {
 function App() {
 
   const [isLogin, SetIsLogin] = useState(false)
+  
   console.log(isLogin);
 
         return (
@@ -33,6 +34,7 @@ function App() {
         <Route path = "/Dashboard/MyWallet"  component = {MyWallet} />
         <Route path ="/Dashboard/About"  component  = {About}/>
         <Route path ="/Dashboard/TransactionInfo"  component  = {TransactionInfo}/>
+        <Route path ="/Dashboard/AddTransaction"  component  = {About}/>
      
       </Switch>
     </div>
