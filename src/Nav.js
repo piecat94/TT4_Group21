@@ -54,7 +54,7 @@ class Nav extends React.Component {
         
                         <Link style = {{color : "black"}}
                         to = "/Dashboard/TransactionInfo">
-                        Logout
+                        Transaction
                         </Link>
         </Menu.Item>
       </Menu>

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+ import React, { useState } from "react"
 
 import Login from "./Login"
 import Nav from "./Nav"
@@ -20,7 +20,7 @@ function App() {
   const [isLogin, SetIsLogin] = useState(false)
   console.log(isLogin);
 
-  return (
+        return (
     //routing pathways 
     <Router>
     <div>
@@ -38,7 +38,9 @@ function App() {
     </div>
     
     </Router>
-  );
+
+   );
+
 }
 
 export default App;

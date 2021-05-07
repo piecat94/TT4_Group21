@@ -20,11 +20,11 @@ class TransactionInfo extends Component {
     
 
     componentDidMount(){
-        this.callAPI()
+        this.call()
     } 
 
     //call API 
-    callAPI(){
+    async call(){
         var axios = require('axios');
         var data = JSON.stringify({
         "custID": 21,
@@ -49,13 +49,13 @@ class TransactionInfo extends Component {
         .catch(function (error) {
         console.log(error);
         });
-
+        console.log(this.items)
     }
     render() {
         return (
             <div>
                 <h1>Transaction Details</h1>
-                <ShowTransaction items = {this.items}/>
+                <ShowTransaction items = {this.state.items}/>
              </div>
         );
     }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const ShowTransaction = ({items}) =>{
+export const ShowTransaction = (props) =>{
     return(
         <table>
             <thead>
@@ -16,7 +16,7 @@ export const ShowTransaction = ({items}) =>{
             </thead>
 
             <tbody>
-                {items.map(e=>
+                {props.items.map(e=>
                     <tr>
                         <td>{e.eGift}</td>
                         <td>{e.dateTime}</td>
