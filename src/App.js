@@ -31,7 +31,7 @@ function App() {
         <Route path = "/" exact component = {()=><Login setLogin ={() => SetIsLogin(true)}/>}/>
         <Route path = "/Dashboard" exact component = {()=><Dashboard loginState = {isLogin}/>}/>
         <Route path = "/Dashboard/MyWallet"  component = {MyWallet} />
-        <Route path ="/Dashboard/About"  component  = {About}/>
+        <Route path ="/Dashboard/AddTransaction"  component  = {About}/>
      
       </Switch>
     </div>

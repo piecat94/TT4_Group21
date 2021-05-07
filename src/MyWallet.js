@@ -70,7 +70,7 @@ function MyWallet(){
     return (
         <div>
             <h3>
-                My Wallet
+                My Account
             </h3>
             <Radio.Group
         onChange={({ target: { value } }) => {
