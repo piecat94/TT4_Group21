@@ -5,6 +5,7 @@ import Nav from "./Nav"
 import About from "./About"
 import MyWallet from "./MyWallet"
 import Dashboard from "./Dashboard"
+import TransactionInfo from "./components/TransactionInfo"
 import {
   BrowserRouter as Router,
   Switch,

@@ -42,26 +42,25 @@ class TransactionInfo extends Component {
         };
 
         axios(config)
-        .then(function (response) {
-            this.setState({
-                info = response.data
-            })
+        .then(response=>{
+            this.setState({items: response.data})
             console.log(JSON.stringify(response.data));
         })
         .catch(function (error) {
         console.log(error);
         });
 
-        render() 
-            const {info} = this.state;
+        render() {
             return (
                 <div>
                     <h1>Transaction Details</h1>
-                    <ShowTransaction/>
+                    <ShowTransaction items = {this.items}/>
                 </div>
             )
-        };
+        }
     }
+    
 }
 
 export default TransactionInfo
+
