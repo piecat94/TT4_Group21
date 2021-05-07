@@ -1,4 +1,4 @@
-import React, {useState, useEffect}from "react"
+import React, {useState, useEffect} from "react"
 import Axios from 'axios'
 import {
     BrowserRouter as Router,
@@ -10,14 +10,13 @@ import {
 function Dashboard(props){
 
     // Setting state with hooks useState function
-  const [joke, setJoke] = useState("")
-  
+  const [acctdetails, setAcct] = useState([])
   
   let temp  = "Temporary"
 
     // Calling API using Axios + useEffect
     
-    async function getJoke() {
+    async function getAcct() {
       try {
         let res = await Axios({
           method: 'POST',
@@ -27,10 +26,13 @@ function Dashboard(props){
         });
         console.log(res.data)
         
-        let data = res.data;
-        setJoke(`${data.firstName} ${data.lastName}`)
+        // let data = res.data;
+        setAcct(res.data)
+        console.log(acctdetails)
+
+
       } catch (error) {
-        console.log(error.response); // this is the main part. Use the response property from the error object
+        // console.log(error.response); // this is the main part. Use the response property from the error object
     
         return error.response;
       }
@@ -38,22 +40,27 @@ function Dashboard(props){
     }
     
         useEffect(() => {
-          getJoke()
+          getAcct()
+          
           // setInterval(() => {
           //   getJoke()
           // }, 1); 
       }, [])
  
 
-console.log(props.loginState)
+// console.log(props.loginState)
   
     return(
+
         <div>
             <h1>
                 Main page
             </h1>
             {/* <button onClick = {getJoke}>Get Joke</button> */}
-            {joke}
+            <p> {acctdetails.firstName} {acctdetails.lastName}</p>
+            <p> {acctdetails.email} </p>
+            <p> {acctdetails.address} </p>
+            <p> {acctdetails.nric} </p>
             {/* {props.loginState?<h1>True</h1>:<h1>False</h1>} */}
 
         </div>
