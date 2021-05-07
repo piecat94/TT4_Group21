@@ -41,11 +41,9 @@ function Dashboard(props){
     }
     
         useEffect(() => {
+
           getAcct()
-          
-          // setInterval(() => {
-          //   getJoke()
-          // }, 1); 
+
       }, [])
  
 

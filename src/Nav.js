@@ -34,13 +34,13 @@ class Nav extends React.Component {
         <Menu.Item key="app" icon={<AppstoreOutlined />}>
         <Link style = {{color : "black"}}
                         to = "/Dashboard/MyWallet">
-                        My Wallet
+                        My Account Details
                         </Link>
         </Menu.Item>
         <Menu.Item key="SubMenu" icon={<SettingOutlined />} title="Navigation Three - Submenu">
         <Link style = {{color : "black"}}
-                         to="/Dashboard/About">
-                        About page
+                         to="/Dashboard/AddTransaction">
+                        Transfer money
                         </Link>
         </Menu.Item>
         <Menu.Item key="alipay">
@@ -48,6 +48,13 @@ class Nav extends React.Component {
                         <Link style = {{color : "black"}}
                         to = "/">
                         Logout
+                        </Link>
+        </Menu.Item>
+        <Menu.Item key="transaction">
+        
+                        <Link style = {{color : "black"}}
+                        to = "/Dashboard/TransactionInfo">
+                        Transaction
                         </Link>
         </Menu.Item>
       </Menu>

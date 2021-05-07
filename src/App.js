@@ -1,10 +1,11 @@
-import React, { useState } from "react"
+ import React, { useState } from "react"
 
 import Login from "./Login"
 import Nav from "./Nav"
 import About from "./About"
 import MyWallet from "./MyWallet"
 import Dashboard from "./Dashboard"
+import TransactionInfo from "./TransactionInfo"
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,7 +20,7 @@ function App() {
   const [isLogin, SetIsLogin] = useState(false)
   console.log(isLogin);
 
-  return (
+        return (
     //routing pathways 
     <Router>
     <div>
@@ -31,12 +32,16 @@ function App() {
         <Route path = "/Dashboard" exact component = {()=><Dashboard loginState = {isLogin}/>}/>
         <Route path = "/Dashboard/MyWallet"  component = {MyWallet} />
         <Route path ="/Dashboard/About"  component  = {About}/>
+        <Route path ="/Dashboard/TransactionInfo"  component  = {TransactionInfo}/>
+        <Route path ="/Dashboard/AddTransaction"  component  = {About}/>
      
       </Switch>
     </div>
     
     </Router>
-  );
+
+   );
+
 }
 
 export default App;
